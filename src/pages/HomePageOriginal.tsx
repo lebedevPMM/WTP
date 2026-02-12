@@ -40,13 +40,13 @@ const processSteps = [
 ]
 
 const productLines = [
-    { icon: 'B', iconVariant: 'accent' as const, title: 'Banking', meta: 'Personal & Corporate Accounts, Payment Infrastructure, Compliance', action: 'VIEW', href: '/products/banking' },
-    { icon: 'S', iconVariant: 'default' as const, title: 'Business Setup', meta: 'Free Zone / Mainland, Licensing, Tax Registration', action: 'VIEW', href: '/products/business-setup' },
-    { icon: 'R', iconVariant: 'default' as const, title: 'Residency', meta: 'Employment / Investor / Golden Visa, Emirates ID, Family', action: 'VIEW', href: '/products/residency' },
-    { icon: 'A', iconVariant: 'default' as const, title: 'Assets & Wealth', meta: 'Real Estate Advisory, Wills & Succession, Foundations', action: 'VIEW', href: '/products/assets-wealth' },
+    { icon: 'B', iconVariant: 'accent' as const, title: 'Banking', meta: 'Personal & Corporate, Payments, Compliance', action: 'VIEW', href: '/products/banking' },
+    { icon: 'S', iconVariant: 'default' as const, title: 'Business Setup', meta: 'Registration, Licensing, Tax', action: 'VIEW', href: '/products/business-setup' },
+    { icon: 'R', iconVariant: 'default' as const, title: 'Residency', meta: 'Visas, Emirates ID', action: 'VIEW', href: '/products/residency' },
+    { icon: 'A', iconVariant: 'default' as const, title: 'Assets & Wealth', meta: 'Real Estate, Wills, Foundations', action: 'VIEW', href: '/products/assets-wealth' },
 ]
 
-const HomePage: React.FC = () => {
+const HomePageOriginal: React.FC = () => {
     return (
         <>
             {/* Hero */}
@@ -89,10 +89,6 @@ const HomePage: React.FC = () => {
                         See full terms
                     </a>
                 </h2>
-                <p className="section-subtitle">
-                    <strong>Banking First</strong> — We assess every case through the bank's lens before
-                    any registration. Only after a positive signal do we proceed.
-                </p>
                 <div className="list-group">
                     {processSteps.map((step) => (
                         <ListRow key={step.icon} {...step} />
@@ -106,11 +102,11 @@ const HomePage: React.FC = () => {
                     Risk Policy
                     <span className="mono-label">Gatekeeping</span>
                 </h2>
-                <div className="grid-3">
+                <div className="grid-2">
                     <Card
                         icon="✓"
                         title="We Accept"
-                        description="Multi-service potential, transparent business logic, document readiness, long-term orientation."
+                        description="Transparent rationale, document readiness, realistic expectations."
                         iconBorderRadius="4px"
                         minHeight={200}
                     />
@@ -118,15 +114,7 @@ const HomePage: React.FC = () => {
                         icon="⚠"
                         iconVariant="dashed"
                         title="Conditions Apply"
-                        description="Complex banking cases, difficult structures or jurisdictions. Higher pricing, fixed scope, no result guarantee."
-                        iconBorderRadius="4px"
-                        minHeight={200}
-                    />
-                    <Card
-                        icon="✕"
-                        iconVariant="dotted"
-                        title="We Decline"
-                        description="Sanctioned persons, requests without documents, no prepayment readiness, one-off tasks without continuation potential."
+                        description="High risk or complex structures require enhanced control and fixed scope."
                         iconBorderRadius="4px"
                         minHeight={200}
                     />
@@ -153,17 +141,8 @@ const HomePage: React.FC = () => {
                     ))}
                 </div>
             </section>
-
-            {/* Partner Protection */}
-            <section className="partner-protection-bar">
-                <div className="protection-icon">🛡</div>
-                <div className="protection-text">
-                    <strong>Partner Protection:</strong>{' '}
-                    Client ownership is fixed. Non-circumvention guaranteed. 12–24 month exclusivity after last activity.
-                </div>
-            </section>
         </>
     )
 }
 
-export default HomePage
+export default HomePageOriginal

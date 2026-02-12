@@ -1,4 +1,5 @@
 export { default as HomePage } from './HomePage'
+export { default as HomePageOriginal } from './HomePageOriginal'
 export { default as PartnerKitPage } from './PartnerKitPage'
 export { default as SubmitCasePage } from './SubmitCasePage'
 export { default as EngagementPage } from './EngagementPage'

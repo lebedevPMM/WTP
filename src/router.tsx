@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import Layout from './components/Layout'
 import {
     HomePage,
+    HomePageOriginal,
     PartnerKitPage,
     SubmitCasePage,
     EngagementPage,
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
         element: <Layout />,
         children: [
             { index: true, element: <HomePage /> },
+            { path: 'v1', element: <HomePageOriginal /> },
             { path: 'partner-kit', element: <PartnerKitPage /> },
             { path: 'submit-case', element: <SubmitCasePage /> },
             { path: 'engagement', element: <EngagementPage /> },
